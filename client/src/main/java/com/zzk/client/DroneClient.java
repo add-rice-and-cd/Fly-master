@@ -51,6 +51,7 @@ public class DroneClient {
 
     public static void main(String[] args) throws InterruptedException {
         // new DroneClient ("43.139.150.149",8888).init();
-        new DroneClient ("10.163.151.193",8888).init();
+        new DroneClient ("10.133.252.250",8888).init();
+        // new DroneClient ("192.168.1.16",8888).init();
     }
 }

@@ -1,40 +1,20 @@
 <template>
   <div class="app-container home">
-    <el-row :gutter="15">
-      <el-col :sm="24" :lg="24">
-        <div class="footerImage" >
+    <!-- 上半部分：显示 bgFooter.png，背景为白色 -->
+    <el-row :gutter="0">
+      <el-col :span="24">
+        <div class="upper-section">
           <el-image :src="footerImageIndex" :fit="fit"></el-image>
-          <el-image  :src="bgImageIndex" :fit="fit"></el-image>
         </div>
       </el-col>
     </el-row>
-    <el-row :gutter="24">
-      <el-col :sm="24" :lg="24">
-<!--        <div class="bgImgae">-->
 
-<!--        </div>-->
+    <!-- 下半部分：使用 bgIndex.png 作为背景图，铺满整个区域 -->
+    <el-row :gutter="0">
+      <el-col :span="24">
+        <div class="lower-section" :style="{ backgroundImage: 'url(' + bgImageIndex + ')' }"></div>
       </el-col>
-<!--      <el-col :sm="24" :lg="24">-->
-<!--        <div class="footerImgae" >-->
-<!--          <el-image :src="footerImageIndex" :fit="fit"></el-image>-->
-<!--        </div>-->
-<!--      </el-col>-->
     </el-row>
-
-<!--    <el-divider />-->
-<!--    <el-row :gutter="20">-->
-<!--      <el-col :xs="24" :sm="24" :md="12" :lg="8">-->
-
-<!--      </el-col>-->
-<!--      <el-col :xs="24" :sm="24" :md="12" :lg="8">-->
-<!--        <el-card class="update-log">-->
-
-<!--        </el-card>-->
-<!--      </el-col>-->
-<!--      <el-col :xs="24" :sm="24" :md="12" :lg="8">-->
-
-<!--      </el-col>-->
-<!--    </el-row>-->
   </div>
 </template>
 
@@ -43,9 +23,9 @@ export default {
   name: "Index",
   data() {
     return {
-      bgImageIndex:require("@/assets/images/bgIndex.jpg"),
-      footerImageIndex:require("@/assets/images/bgFooter.png"),
-      fit:"fill",
+      bgImageIndex: require("@/assets/images/bgIndex.png"),
+      footerImageIndex: require("@/assets/images/bgFooter.png"),
+      fit: "fill", // 保持原值，用于上部图片
       // 版本号
       version: "3.8.5"
     };
@@ -60,21 +40,27 @@ export default {
 
 <style scoped lang="scss">
 .home {
-  .bgImgae{
-
-    //max-height: 515px;
+  .upper-section {
+    height: 300px; /* 固定高度 */
+    background-color: white; /* 改为白色 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  .footerImage{
-    width: 100%;
-    text-align:center;
-    background: RGB(2,81,202);
+
+  .lower-section {
+    height: calc(100vh - 300px); /* 自动计算剩余高度 */
+    background-size: cover; /* 等比放大，铺满容器 */
+    background-position: center; /* 居中对齐 */
+    background-repeat: no-repeat; /* 不重复 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   color: #676a6c;
   overflow-x: hidden;
-
 }
 </style>
-

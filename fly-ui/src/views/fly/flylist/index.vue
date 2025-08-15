@@ -209,6 +209,7 @@
 <script>
 import { listDrone, getDrone, delDrone, addDrone, updateDrone } from '@/api/system/fly/drone'
 
+
 export default {
   name: 'index',
   dicts: ['drone_status', 'drone_signal'],

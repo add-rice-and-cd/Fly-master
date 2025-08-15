@@ -1,0 +1,46 @@
+Device latitude:31.888944
+Device longitude:118.809997
+Operator latitude:31.888944
+Operator longitude:118.809997
+Drone SNnumber:1581F6N8C241C00396AD
+Drone latitude:31.906982
+Drone longitude:118.810310
+Drone altitude:129
+Drone direction:361
+Drone speed:0
+
+
+Device latitude:31.888944
+Device longitude:118.809997
+Operator latitude:31.888941
+Operator longitude:118.810006
+Drone SNnumber:1581F6N8C241C00396AD
+Drone latitude:31.906826
+Drone longitude:118.810310
+Drone altitude:128
+Drone direction:358
+Drone speed:8
+
+
+Device latitude:31.888944
+Device longitude:118.809997
+Operator latitude:31.891859
+Operator longitude:118.823587
+Drone SNnumber:1581F6N8C241C00396AD
+Drone latitude:31.882835
+Drone longitude:118.823669
+Drone altitude:57
+Drone direction:361
+Drone speed: 0
+
+
+Device latitude:31.888944
+Device longitude:118.809997
+Operator latitude:31.891843
+Operator longitude:118.823590
+Drone SNnumber:1581F6N8C241C00396AD
+Drone latitude:31.882846
+Drone longitude:118.823680
+Drone altitude:57
+Drone direction:361
+Drone speed: 0

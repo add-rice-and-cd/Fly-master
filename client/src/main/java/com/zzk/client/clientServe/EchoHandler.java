@@ -19,10 +19,348 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
+//对RemoteID测试.txt文件进行解析，并写入bmhFlyData.txt文件
+//对bmhFlyData.txt文件进行解析，并写入loginBytes和cardBytes
+//对loginBytes和cardBytes进行解析，并写入bmhFlyData.txt文件
+//对bmhFlyData.txt文件进行解析，并写入loginBytes和cardBytes
 public class EchoHandler extends ChannelInboundHandlerAdapter {
 
-    private static final String BMH_FLY_DATA_PATH = "D:\\GraduateStudent\\ONE\\test\\Fly-master(Uav nose)\\client\\src\\main\\java\\com\\zzk\\client\\clientServe\\bmhFlyData.txt";
-    private static final String DRONE_LOG_PATH = "D:\\GraduateStudent\\ONE\\test\\Fly-master(Uav nose)\\client\\src\\main\\java\\com\\zzk\\client\\clientServe\\DroneFlightLog.txt";
+    private static final String BMH_FLY_DATA_PATH = "D:\\GraduateStudent\\ONE\\test\\Fly-master(CAMERA)\\client\\src\\main\\java\\com\\zzk\\client\\clientServe\\bmhFlyData.txt";
+    private static final String REMOTE_ID_PATH = "D:\\GraduateStudent\\ONE\\test\\Fly-master(CAMERA)\\client\\src\\main\\java\\com\\zzk\\client\\clientServe\\500m内.txt";
+
+    private ExecutorService fileWriteExecutor = new ThreadPoolExecutor(
+            5, 10, 60, TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>(100)
+    );
+    private ExecutorService fileReadExecutor = new ThreadPoolExecutor(
+            5, 10, 60, TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>(100)
+    );
+    private ReentrantLock fileWriteLock = new ReentrantLock();
+
+    @Override
+    public void channelActive(ChannelHandlerContext ctx) throws Exception {
+        // 线程1：实时读取bmhFlyData.txt文件并进行编码解码
+        fileReadExecutor.execute(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    processBmhFlyData(ctx);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        // 线程2：监控RemoteID测试.txt文件并解析写入bmhFlyData.txt
+        fileWriteExecutor.execute(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    watchAndParseRemoteID();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
+
+    private void watchAndParseRemoteID() throws IOException, InterruptedException {
+        Path remoteIdPath = Paths.get(REMOTE_ID_PATH);
+        if (!Files.exists(remoteIdPath)) {
+            throw new FileNotFoundException("RemoteID测试.txt not found");
+        }
+
+        // 文件变化监听器
+        WatchService watchService = FileSystems.getDefault().newWatchService();
+        remoteIdPath.getParent().register(watchService, StandardWatchEventKinds.ENTRY_MODIFY);
+
+        // 初始解析RemoteID测试.txt并写入bmhFlyData.txt
+        parseRemoteIDAndWriteToBmhFlyData();
+
+        while (true) {
+            WatchKey key = watchService.take();
+            for (WatchEvent<?> event : key.pollEvents()) {
+                WatchEvent.Kind<?> kind = event.kind();
+                if (kind == StandardWatchEventKinds.ENTRY_MODIFY) {
+                    Path changedFile = (Path) event.context();
+                    if (changedFile.equals(remoteIdPath.getFileName())) {
+                        fileWriteLock.lock();
+                        try {
+                            // 读取新增的数据并写入bmhFlyData.txt
+                            parseNewRemoteIDData();
+                        } finally {
+                            fileWriteLock.unlock();
+                        }
+                    }
+                }
+            }
+            boolean valid = key.reset();
+            if (!valid) {
+                break;
+            }
+        }
+    }
+
+    // 解析RemoteID测试.txt所有内容，写入bmhFlyData.txt（保留前两行）
+    private void parseRemoteIDAndWriteToBmhFlyData() {
+        try {
+            fileWriteLock.lock();
+            Path bmhPath = Paths.get(BMH_FLY_DATA_PATH);
+            if (!Files.exists(bmhPath.getParent())) {
+                Files.createDirectories(bmhPath.getParent());
+            }
+
+            // 读取前两行并保留
+            List<String> existingLines = new ArrayList<String>();
+            if (Files.exists(bmhPath)) {
+                BufferedReader reader = new BufferedReader(new FileReader(bmhPath.toString()));
+                String line;
+                int count = 0;
+                while ((line = reader.readLine()) != null && count < 2) {
+                    existingLines.add(line);
+                    count++;
+                }
+                reader.close();
+            }
+
+            // 清空文件并写入前两行
+            BufferedWriter writer = new BufferedWriter(new FileWriter(bmhPath.toString(), false));
+            for (String line : existingLines) {
+                writer.write(line);
+                writer.newLine();
+            }
+
+            // 解析RemoteID测试.txt
+            BufferedReader reader = new BufferedReader(new FileReader(REMOTE_ID_PATH));
+            String line;
+            int index = 0;
+            List<String> group = new ArrayList<String>();
+            while ((line = reader.readLine()) != null) {
+                if (line.trim().isEmpty()) continue;
+                group.add(line.trim());
+                if (group.size() == 10) {
+                    // 解析经纬度
+                    String droneLat = null, droneLng = null;
+                    for (String item : group) {
+                        if (item.startsWith("Drone latitude:")) {
+                            droneLat = item.substring("Drone latitude:".length()).trim();
+                        }
+                        if (item.startsWith("Drone longitude:")) {
+                            droneLng = item.substring("Drone longitude:".length()).trim();
+                        }
+                    }
+                    if (droneLat != null && droneLng != null) {
+                        String formattedLine = String.format("%d  %s  %s", index, droneLng, droneLat);
+                        writer.write(formattedLine);
+                        writer.newLine();
+                        writer.flush();
+                        index++;
+                    }
+                    group.clear();
+                }
+            }
+            reader.close();
+            writer.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (fileWriteLock.isHeldByCurrentThread()) {
+                fileWriteLock.unlock();
+            }
+        }
+    }
+
+    // 只追加新增的组
+    private void parseNewRemoteIDData() {
+        try {
+            Path bmhPath = Paths.get(BMH_FLY_DATA_PATH);
+            if (!Files.exists(bmhPath)) {
+                return;
+            }
+
+            // 记录bmhFlyData.txt的当前行数
+            long bmhLineCount = 0;
+            BufferedReader reader = new BufferedReader(new FileReader(bmhPath.toString()));
+            while (reader.readLine() != null) {
+                bmhLineCount++;
+            }
+            reader.close();
+
+            // 读取并写入新增的数据
+            reader = new BufferedReader(new FileReader(REMOTE_ID_PATH));
+            String line;
+            int index = (int) bmhLineCount - 2; // 跳过前两行
+            int skippedGroups = index;
+            int groupCount = 0;
+            List<String> group = new ArrayList<String>();
+            while ((line = reader.readLine()) != null) {
+                if (line.trim().isEmpty()) continue;
+                group.add(line.trim());
+                if (group.size() == 11) {
+                    if (groupCount < skippedGroups) {
+                        groupCount++;
+                        group.clear();
+                        continue;
+                    }
+                    // 解析经纬度
+                    String droneLat = null, droneLng = null;
+                    for (String item : group) {
+                        if (item.startsWith("Drone latitude:")) {
+                            droneLat = item.substring("Drone latitude:".length()).trim();
+                        }
+                        if (item.startsWith("Drone longitude:")) {
+                            droneLng = item.substring("Drone longitude:".length()).trim();
+                        }
+                    }
+                    if (droneLat != null && droneLng != null) {
+                        String formattedLine = String.format("%d  %s  %s", index, droneLng, droneLat);
+                        BufferedWriter writer = new BufferedWriter(new FileWriter(bmhPath.toString(), true));
+                        writer.write(formattedLine);
+                        writer.newLine();
+                        writer.flush();
+                        writer.close();
+                        index++;
+                    }
+                    group.clear();
+                    groupCount++;
+                }
+            }
+            reader.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    // 下面是原有的bmhFlyData.txt实时读取和编码解码逻辑
+    private void processBmhFlyData(ChannelHandlerContext ctx) throws IOException {
+        Path path = Paths.get(BMH_FLY_DATA_PATH);
+        Scanner scanner = new Scanner(new BufferedReader(new FileReader(path.toString())));
+        String droneId = "";
+        String cardId = "";
+        byte[] loginBytes = null;
+        byte[] cardBytes = null;
+
+        // 读取前两行
+        if (scanner.hasNextLine()) {
+            String line = scanner.nextLine();
+            if (!line.trim().isEmpty()) {
+                droneId = line.trim();
+            }
+        }
+        if (scanner.hasNextLine()) {
+            String line = scanner.nextLine();
+            if (!line.trim().isEmpty()) {
+                cardId = line.trim();
+            }
+        }
+
+        // 构造loginBytes
+        if (!droneId.isEmpty() && !cardId.isEmpty()) {
+            loginBytes = new byte[18];
+            // 这里假设你有ByteUtils工具类
+            byte[] droneBytes = ByteUtils.hexString2Bytes(droneId);
+            cardBytes = ByteUtils.string2HexBytes(cardId);
+
+            loginBytes[0] = 0x01;
+            ByteUtils.fillBytes(loginBytes, droneBytes, 1);
+            ByteUtils.fillBytes(loginBytes, cardBytes, 9);
+            loginBytes[14] = 0x00;
+            loginBytes[15] = 0x01;
+            loginBytes[16] = (byte) 0x8C;
+            loginBytes[17] = (byte) 0xDD;
+
+            // 发送loginBytes
+            if (ctx.channel().isActive() && ctx.channel().isWritable()) {
+                ctx.writeAndFlush(loginBytes);
+            } else {
+                System.err.println("Connection is not active or writable.");
+                scanner.close();
+                return;
+            }
+        }
+
+        // 处理后续的定位数据
+        while (scanner.hasNextLine()) {
+            String line = scanner.nextLine();
+            if (line.trim().isEmpty())
+                continue;
+
+            String[] parts = line.split("  ");
+            if (parts.length >= 3) {
+                // 这里假设你有ByteUtils和Gps工具类
+                byte[] positioningBytes = new byte[40];
+                positioningBytes[0] = 0x02;
+                ByteUtils.fillBytes(positioningBytes, cardBytes, 1);
+                positioningBytes[6] = 0x01;
+                LocalDateTime now = LocalDateTime.now(ZoneId.systemDefault());
+                positioningBytes[7] = (byte) (now.getYear() - 2000);
+                positioningBytes[8] = (byte) now.getMonthValue();
+                positioningBytes[9] = (byte) now.getDayOfMonth();
+                positioningBytes[10] = (byte) now.getHour();
+                positioningBytes[11] = (byte) now.getMinute();
+                positioningBytes[12] = (byte) now.getSecond();
+
+                double lngDouble = Double.parseDouble(parts[1]);
+                double latDouble = Double.parseDouble(parts[2]);
+                Gps gps = new Gps(latDouble, lngDouble);
+
+                byte[] lngBytes = ByteUtils.long2HexBytes(Math.round(gps.getWgLon() * 60 * 30000));
+                ByteUtils.fillBytes(positioningBytes, lngBytes, 13);
+
+                byte[] latBytes = ByteUtils.long2HexBytes(Math.round(gps.getWgLat() * 60 * 30000));
+                ByteUtils.fillBytes(positioningBytes, latBytes, 17);
+
+                Random rand = new Random();
+                positioningBytes[21] = 0x00;
+                positioningBytes[22] = (byte) (rand.nextInt(61) + 40);
+                positioningBytes[23] = 0x00;
+                positioningBytes[24] = (byte) (rand.nextInt(71) + 40);
+                positioningBytes[25] = 0x00;
+                positioningBytes[26] = (byte) (rand.nextInt(71) + 40);
+                positioningBytes[27] = 0x01;
+                positioningBytes[28] = (byte) 0xCC;
+                positioningBytes[29] = 0x00;
+                positioningBytes[30] = 0x28;
+                positioningBytes[31] = 0x7D;
+                positioningBytes[32] = 0x00;
+                positioningBytes[33] = 0x00;
+                positioningBytes[34] = 0x1F;
+                positioningBytes[35] = (byte) 0xB8;
+                positioningBytes[36] = 0x00;
+                positioningBytes[37] = 0x01;
+                positioningBytes[38] = (byte) 0x8C;
+                positioningBytes[39] = (byte) 0xDD;
+
+                if (ctx.channel().isActive() && ctx.channel().isWritable()) {
+                    ctx.writeAndFlush(positioningBytes);
+                } else {
+                    System.err.println("Connection is not active or writable.");
+                    break;
+                }
+            }
+
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        scanner.close();
+    }
+    @Override
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+        cause.printStackTrace();
+        ctx.close();
+    }
+}
+
+//对DroneFlightLog.txt文件进行解析，并写入bmhFlyData.txt文件
+//对bmhFlyData.txt文件进行解析，并写入loginBytes和cardBytes
+//对loginBytes和cardBytes进行解析，并写入bmhFlyData.txt文件
+//对bmhFlyData.txt文件进行解析，并写入loginBytes和cardBytes
+/*public class EchoHandler extends ChannelInboundHandlerAdapter {
+
+    private static final String BMH_FLY_DATA_PATH = "D:\\GraduateStudent\\ONE\\test\\Fly-master1\\client\\src\\main\\java\\com\\zzk\\client\\clientServe\\bmhFlyData.txt";
+    private static final String DRONE_LOG_PATH = "D:\\GraduateStudent\\ONE\\test\\Fly-master1\\client\\src\\main\\java\\com\\zzk\\client\\clientServe\\DroneFlightLog.txt";
 
     private ExecutorService fileWriteExecutor = new ThreadPoolExecutor(
             5, // 核心线程数
@@ -444,7 +782,7 @@ public class EchoHandler extends ChannelInboundHandlerAdapter {
         cause.printStackTrace();
         ctx.close();
     }
-}
+} */
 
 /*实现写入和编解码，未加入监听文件代码如下： */
 // package com.zzk.client.clientServe;

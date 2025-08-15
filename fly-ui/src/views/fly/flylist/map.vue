@@ -11,6 +11,27 @@
       </el-button>
     </div>
 
+    <!--客户端模拟器新增-->
+    <div class="drone-client-control">
+      <el-button 
+        type="warning" 
+        icon="el-icon-video-play" 
+        size="mini" 
+        @click="handleStartClient"
+      >
+        启动模拟器
+      </el-button>
+      <el-button 
+        type="danger" 
+        icon="el-icon-video-pause" 
+        size="mini" 
+        @click="handleStopClient"
+      >
+        停止模拟器
+      </el-button>
+    </div>
+    <!--客户端模拟器结束-->
+
     <div class="area">
       <el-button v-if="isShowArea===true" @click="showArea" type="primary" icon="el-icon-remove-outline" size="mini">
         显示围栏
@@ -140,6 +161,9 @@
 <script>
 import AMapLoader from '@amap/amap-jsapi-loader'
 import axios from 'axios'
+//实时追踪模拟新增
+import request from '@/utils/request'
+//实时追踪模拟结束
 import { listDrone, getDrone, delDrone, addDrone, updateDrone } from '@/api/system/fly/drone'
 import { historyPathList, uploadHistoryPath, historyPathQuery, deleteHistoryPath } from '@/api/system/fly/historyPath'
 import { deletePlanPath, planPathList, planPathQuery } from '@/api/system/fly/planPath'
@@ -404,10 +428,14 @@ export default {
           this.isOpeninfoWindow = true
           //打开信息窗口
           this.infoWindow.open(this.map, this.droneMarker.getPosition())
-          this.infoWindow.setContent(`<B>${this.drone.droneName}</B> </br><B>速度：</B>   ${this.drone.location.speed}   km/h&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <B>方向：</B> ${this.drone.location.direction} 度 <br/>
-                                            <B>高度：</B>   ${this.drone.location.altitude}   m&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <B>电量：</B>   ${this.drone.currentBatteryLevel}   %`)
+          this.infoWindow.setContent(`
+          <B>${this.drone.droneName}</B> </br>
+          <B>速度：</B>   ${this.drone.location.speed}   km/h<br/>                             
+          <B>经度：</B>   ${this.drone.location.lng}  <br/>         
+          <B>纬度：</B>   ${this.drone.location.lat}  <br/>                                 
+          <B>方向：</B> ${this.drone.location.direction} 度 <br/>                                 
+          <B>高度：</B>   ${this.drone.location.altitude}   m<br/>                 
+          <B>电量：</B>   ${this.drone.currentBatteryLevel}   %`)
         })
 
       } else {
@@ -419,10 +447,14 @@ export default {
         })
         if (this.isOpeninfoWindow) {
           this.infoWindow.setPosition(data)
-          this.infoWindow.setContent(`<B>${this.drone.droneName}</B> </br><B>速度：</B>   ${this.drone.location.speed}   km/h&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <B>方向：</B> ${this.drone.location.direction} 度 <br/>
-                                            <B>高度：</B>   ${this.drone.location.altitude}   m&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <B>电量：</B>   ${this.drone.currentBatteryLevel}   %`)
+          this.infoWindow.setContent(`
+          <B>${this.drone.droneName}</B> </br>
+          <B>速度：</B>   ${this.drone.location.speed}   km/h<br/>
+          <B>经度：</B>   ${this.drone.location.lng}  <br/>
+          <B>纬度：</B>   ${this.drone.location.lat}  <br/>
+          <B>方向：</B> ${this.drone.location.direction} 度 <br/>
+          <B>高度：</B>   ${this.drone.location.altitude}   m<br/>
+          <B>电量：</B>   ${this.drone.currentBatteryLevel}   %`)
 
         }
 
@@ -720,7 +752,38 @@ export default {
       // this.rePloygon.hide();
       // this.rePloygons=[];
 
-    }
+    },
+    /**
+     * 启动无人机客户端模拟程序
+     */
+    handleStartClient() {
+      this.$modal.confirm('是否确认启动无人机客户端模拟程序？').then(() => {
+        return request({
+          url: '/fly/flylist/startClient',
+          method: 'post'
+        })
+      }).then(response => {
+        this.$modal.msgSuccess(response.msg)
+      }).catch(() => {
+        this.$modal.msgError("启动失败")
+      })
+    },
+    
+    /**
+     * 停止无人机客户端模拟程序
+     */
+    handleStopClient() {
+      this.$modal.confirm('是否确认停止无人机客户端模拟程序？').then(() => {
+        return request({
+          url: '/fly/flylist/stopClient',
+          method: 'post'
+        })
+      }).then(response => {
+        this.$modal.msgSuccess(response.msg)
+      }).catch(() => {
+        this.$modal.msgError("停止失败")
+      })
+    },
 
   }
 }
@@ -767,6 +830,26 @@ export default {
     margin: 20px;
     right: 0;
   }
+  // 实时追踪模拟新增
+  .drone-client-control {
+    position: absolute;
+    z-index: 999;
+    top: 10px;                    // 距离顶部 10px，对应红框区域
+    left: 50%;                    // 水平居中起点
+    transform: translateX(-50%);  // 向左偏移 50%，实现水平居中
+    width: 200px;                 // 固定宽度，防止撑开
+    display: flex;
+    flex-direction: row;
+    justify-content: center;      // 按钮内部水平居中
+    align-items: center;            // 垂直居中
+    gap: 10px;
+    padding: 5px 0;
+    
+    .el-button {
+       margin-right: 0;             // 清除多余右边距
+    }
+  }
+// 实时追踪模拟结束
 }
 
 #container {

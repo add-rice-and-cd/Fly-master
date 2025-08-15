@@ -1,0 +1,1457 @@
+Time: 145818.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888898
+Operator longitude:  118.810181
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.892406
+Drone longitude:  118.806686
+Drone altitude: 120
+Drone direction: 361
+Drone speed: 0
+Packet count: 300
+
+Time: 145819.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888899
+Operator longitude:  118.810182
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.892406
+Drone longitude:  118.806686
+Drone altitude: 120
+Drone direction: 361
+Drone speed: 0
+Packet count: 301
+
+Time: 145820.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888898
+Operator longitude:  118.810182
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.892406
+Drone longitude:  118.806686
+Drone altitude: 120
+Drone direction: 361
+Drone speed: 0
+Packet count: 302
+
+Time: 145821.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888899
+Operator longitude:  118.810181
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.892406
+Drone longitude:  118.806686
+Drone altitude: 120
+Drone direction: 361
+0rone speed: 0
+Packet count: 303
+
+Time: 145822.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888899
+Operator longitude:  118.810183
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.892406
+Drone longitude:  118.806686
+Drone altitude: 120
+Drone direction: 361
+Drone speed: 0
+Packet count: 304
+
+Time: 145822.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888899
+Operator longitude:  118.810181
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.892406
+Drone longitude:  118.806686
+Drone altitude: 120
+Drone direction: 361
+Drone speed: 0
+Packet count: 305
+
+Time: 145824.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888900
+Operator longitude:  118.810182
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.892406
+Drone longitude:  118.806686
+Drone altitude: 120
+Drone direction: 361
+Drone speed: 0
+Packet count: 306
+
+Time: 145826.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888902
+Operator longitude:  118.810182
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.892406
+Drone longitude:  118.806686
+Drone altitude: 120
+Drone direction: 361
+Drone speed: 0
+Packet count: 307
+
+Time: 145827.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888901
+Operator longitude:  118.810174
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.892406
+Drone longitude:  118.806686
+Drone altitude: 120
+Drone direction: 138
+Drone speed: 0
+Packet count: 308
+
+Time: 145828.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888921
+Operator longitude:  118.810197
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.892384
+Drone longitude:  118.806717
+Drone altitude: 120
+Drone direction: 141
+Drone speed: 4
+Packet count: 309
+
+Time: 145829.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888918
+Operator longitude:  118.810188
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.892349
+Drone longitude:  118.806740
+Drone altitude: 120
+Drone direction: 141
+Drone speed: 6
+Packet count: 310
+
+Time: 145830.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888918
+Operator longitude:  118.810189
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.892307
+Drone longitude:  118.806786
+Drone altitude: 120
+Drone direction: 141
+Drone speed: 7
+Packet count: 311
+
+Time: 145833.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888919
+Operator longitude:  118.810189
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.892103
+Drone longitude:  118.806976
+Drone altitude: 120
+Drone direction: 141
+Drone speed: 10
+Packet count: 312
+
+Time: 145834.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888918
+Operator longitude:  118.810189
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.892012
+Drone longitude:  118.807053
+Drone altitude: 120
+Drone direction: 141
+Drone speed: 11
+Packet count: 313
+
+Time: 145835.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888913
+Operator longitude:  118.810174
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.891947
+Drone longitude:  118.807114
+Drone altitude: 120
+Drone direction: 142
+Drone speed: 11
+Packet count: 314
+
+Time: 145836.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888913
+Operator longitude:  118.810175
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.891848
+Drone longitude:  118.807205
+Drone altitude: 120
+Drone direction: 142
+Drone speed: 11
+Packet count: 315
+
+Time: 145837.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888914
+Operator longitude:  118.810174
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.891796
+Drone longitude:  118.807251
+Drone altitude: 120
+Drone direction: 143
+Drone speed: 11
+Packet count: 316
+
+Time: 145847.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888908
+Operator longitude:  118.810166
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.891216
+Drone longitude:  118.807770
+Drone altitude: 120
+Drone direction: 143
+Drone speed: 11
+Packet count: 317
+
+Time: 145848.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888908
+Operator longitude:  118.810167
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.891167
+Drone longitude:  118.807808
+Drone altitude: 120
+Drone direction: 143
+Drone speed: 11
+Packet count: 318
+
+Time: 145849.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888907
+Operator longitude:  118.810159
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.891052
+Drone longitude:  118.807899
+Drone altitude: 120
+Drone direction: 142
+Drone speed: 11
+Packet count: 319
+
+Time: 145855.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888882
+Operator longitude:  118.810127
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.890676
+Drone longitude:  118.808289
+Drone altitude: 120
+Drone direction: 136
+Drone speed: 7
+Packet count: 320
+
+Time: 145900.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888907
+Operator longitude:  118.810167
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.890348
+Drone longitude:  118.808601
+Drone altitude: 119
+Drone direction: 140
+Drone speed: 10
+Packet count: 321
+
+Time: 145904.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888910
+Operator longitude:  118.810181
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.890146
+Drone longitude:  118.808792
+Drone altitude: 118
+Drone direction: 361
+Drone speed: 0
+Packet count: 322
+
+Time: 145905.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888911
+Operator longitude:  118.810181
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.890146
+Drone longitude:  118.808792
+Drone altitude: 118
+Drone direction: 84
+Drone speed: 2
+Packet count: 323
+
+Time: 145906.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888913
+Operator longitude:  118.810182
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.890150
+Drone longitude:  118.808830
+Drone altitude: 118
+Drone direction: 79
+Drone speed: 4
+Packet count: 324
+
+Time: 145908.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888914
+Operator longitude:  118.810182
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.890163
+Drone longitude:  118.808952
+Drone altitude: 118
+Drone direction: 81
+Drone speed: 7
+Packet count: 325
+
+Time: 145909.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888914
+Operator longitude:  118.810181
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.890173
+Drone longitude:  118.809036
+Drone altitude: 118
+Drone direction: 81
+Drone speed: 9
+Packet count: 326
+
+Time: 145910.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888914
+Operator longitude:  118.810182
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.890188
+Drone longitude:  118.809143
+Drone altitude: 118
+Drone direction: 81
+Drone speed: 9
+Packet count: 327
+
+Time: 145911.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888882
+Operator longitude:  118.810150
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.890201
+Drone longitude:  118.809258
+Drone altitude: 118
+Drone direction: 81
+Drone speed: 10
+Packet count: 328
+
+Time: 145912.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888905
+Operator longitude:  118.810174
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.890215
+Drone longitude:  118.809380
+Drone altitude: 118
+Drone direction: 84
+Drone speed: 10
+Packet count: 329
+
+Time: 150007.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:    0.000000
+Operator longitude:    0.000000
+Drone SNnumber: 2051FEABPT0000000207
+Drone latitude: 
+Drone longitude: 
+Drone altitude: 
+Drone direction: 
+Drone speed: 
+Packet count: 330
+
+Time: 150008.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888912
+Operator longitude:  118.810181
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.891273
+Drone longitude:  118.809654
+Drone altitude: 117
+Drone direction: 298
+Drone speed: 6
+Packet count: 331
+
+Time: 150010.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:    0.000000
+Operator longitude:    0.000000
+Drone SNnumber: 2051FEABPT0000000207
+Drone latitude: 
+Drone longitude: 
+Drone altitude: 
+Drone direction: 
+Drone speed: 
+Packet count: 332
+
+Time: 150011.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888897
+Operator longitude:  118.810166
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.891331
+Drone longitude:  118.809517
+Drone altitude: 117
+Drone direction: 293
+Drone speed: 3
+Packet count: 333
+
+Time: 150012.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888907
+Operator longitude:  118.810182
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.891334
+Drone longitude:  118.809502
+Drone altitude: 116
+Drone direction: 276
+Drone speed: 0
+Packet count: 334
+
+Time: 150013.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888907
+Operator longitude:  118.810181
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.891334
+Drone longitude:  118.809502
+Drone altitude: 114
+Drone direction: 361
+Drone speed: 0
+Packet count: 335
+
+Time: 150014.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888909
+Operator longitude:  118.810174
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.891334
+Drone longitude:  118.809502
+Drone altitude: 113
+Drone direction: 361
+Drone speed: 0
+Packet count: 336
+
+Time: 150015.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888909
+Operator longitude:  118.810173
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.891334
+Drone longitude:  118.809502
+Drone altitude: 113
+Drone direction: 361
+Drone speed: 0
+Packet count: 337
+
+Time: 150016.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888909
+Operator longitude:  118.810166
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.891334
+Drone longitude:  118.809502
+Drone altitude: 113
+Drone direction: 361
+Drone speed: 0
+Packet count: 338
+
+Time: 150017.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888908
+Operator longitude:  118.810166
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.891334
+Drone longitude:  118.809502
+Drone altitude: 113
+Drone direction: 361
+Drone speed: 0
+Packet count: 339
+
+Time: 150019.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888908
+Operator longitude:  118.810190
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.891334
+Drone longitude:  118.809502
+Drone altitude: 113
+Drone direction: 361
+Drone speed: 0
+Packet count: 340
+
+Time: 150024.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888911
+Operator longitude:  118.810189
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.891334
+Drone longitude:  118.809502
+Drone altitude: 107
+Drone direction: 361
+Drone speed: 0
+Packet count: 341
+
+Time: 150027.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888904
+Operator longitude:  118.810167
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.891334
+Drone longitude:  118.809502
+Drone altitude: 95
+Drone direction: 193
+Drone speed: 1
+Packet count: 342
+
+Time: 150028.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888903
+Operator longitude:  118.810166
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.891321
+Drone longitude:  118.809502
+Drone altitude: 95
+Drone direction: 193
+Drone speed: 3
+Packet count: 343
+
+Time: 150029.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888884
+Operator longitude:  118.810144
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.891266
+Drone longitude:  118.809486
+Drone altitude: 95
+Drone direction: 192
+Drone speed: 6
+Packet count: 344
+
+Time: 150031.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888885
+Operator longitude:  118.810144
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.891119
+Drone longitude:  118.809448
+Drone altitude: 95
+Drone direction: 191
+Drone speed: 9
+Packet count: 345
+
+Time: 150032.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888884
+Operator longitude:  118.810144
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.891069
+Drone longitude:  118.809433
+Drone altitude: 95
+Drone direction: 191
+Drone speed: 9
+Packet count: 346
+
+Time: 150039.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888900
+Operator longitude:  118.810159
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.890573
+Drone longitude:  118.809334
+Drone altitude: 83
+Drone direction: 361
+Drone speed: 0
+Packet count: 347
+
+Time: 150040.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888903
+Operator longitude:  118.810159
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.890573
+Drone longitude:  118.809334
+Drone altitude: 79
+Drone direction: 361
+Drone speed: 0
+Packet count: 348
+
+Time: 150041.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888899
+Operator longitude:  118.810165
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.890573
+Drone longitude:  118.809334
+Drone altitude: 73
+Drone direction: 361
+Drone speed: 0
+Packet count: 349
+
+Time: 150042.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888900
+Operator longitude:  118.810167
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.890573
+Drone longitude:  118.809326
+Drone altitude: 70
+Drone direction: 361
+Drone speed: 0
+Packet count: 350
+
+Time: 150043.000
+Device latitude: 31.888895
+Device longitude: 118.810074
+Operator latitude:   31.888900
+Operator longitude:  118.810166
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.890570
+Drone longitude:  118.809326
+Drone altitude: 70
+Drone direction: 361
+Drone speed: 0
+Packet count: 351
+
+Time: 150044.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888903
+Operator longitude:  118.810166
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.890573
+Drone longitude:  118.809326
+Drone altitude: 70
+Drone direction: 361
+Drone speed: 0
+Packet count: 352
+
+Time: 150045.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888904
+Operator longitude:  118.810165
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.890573
+Drone longitude:  118.809326
+Drone altitude: 70
+Drone direction: 361
+Drone speed: 0
+Packet count: 353
+
+Time: 150047.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888903
+Operator longitude:  118.810181
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.890573
+Drone longitude:  118.809326
+Drone altitude: 70
+Drone direction: 361
+Drone speed: 0
+Packet count: 354
+
+Time: 150048.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888906
+Operator longitude:  118.810174
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.890573
+Drone longitude:  118.809326
+Drone altitude: 70
+Drone direction: 361
+Drone speed: 0
+Packet count: 355
+
+Time: 150050.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888908
+Operator longitude:  118.810174
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.890573
+Drone longitude:  118.809326
+Drone altitude: 70
+Drone direction: 361
+Drone speed: 0
+Packet count: 356
+
+Time: 150051.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888907
+Operator longitude:  118.810174
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.890573
+Drone longitude:  118.809326
+Drone altitude: 70
+Drone direction: 361
+Drone speed: 0
+Packet count: 357
+
+Time: 150052.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888908
+Operator longitude:  118.810175
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.890573
+Drone longitude:  118.809326
+Drone altitude: 70
+Drone direction: 361
+Drone speed: 0
+Packet count: 358
+
+Time: 150055.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888914
+Operator longitude:  118.810167
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.890467
+Drone longitude:  118.809380
+Drone altitude: 70
+Drone direction: 151
+Drone speed: 7
+Packet count: 359
+
+Time: 150056.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888912
+Operator longitude:  118.810166
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.890417
+Drone longitude:  118.809418
+Drone altitude: 70
+Drone direction: 136
+Drone speed: 7
+Packet count: 360
+
+Time: 150057.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888912
+Operator longitude:  118.810167
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.890348
+Drone longitude:  118.809486
+Drone altitude: 70
+Drone direction: 137
+Drone speed: 9
+Packet count: 361
+
+Time: 150058.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888909
+Operator longitude:  118.810159
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.890310
+Drone longitude:  118.809532
+Drone altitude: 70
+Drone direction: 137
+Drone speed: 9
+Packet count: 362
+
+Time: 150059.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888909
+Operator longitude:  118.810166
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.890224
+Drone longitude:  118.809585
+Drone altitude: 71
+Drone direction: 175
+Drone speed: 8
+Packet count: 363
+
+Time: 150100.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888910
+Operator longitude:  118.810166
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.890171
+Drone longitude:  118.809570
+Drone altitude: 70
+Drone direction: 207
+Drone speed: 7
+Packet count: 364
+
+Time: 150103.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888880
+Operator longitude:  118.810144
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.889990
+Drone longitude:  118.809364
+Drone altitude: 70
+Drone direction: 221
+Drone speed: 9
+Packet count: 365
+
+Time: 150105.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888902
+Operator longitude:  118.810159
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.889849
+Drone longitude:  118.809280
+Drone altitude: 69
+Drone direction: 196
+Drone speed: 9
+Packet count: 366
+
+Time: 150110.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888898
+Operator longitude:  118.810158
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.889700
+Drone longitude:  118.809464
+Drone altitude: 58
+Drone direction: 81
+Drone speed: 3
+Packet count: 367
+
+Time: 150111.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888898
+Operator longitude:  118.810159
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.889696
+Drone longitude:  118.809471
+Drone altitude: 56
+Drone direction: 107
+Drone speed: 1
+Packet count: 368
+
+Time: 150112.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888898
+Operator longitude:  118.810158
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.889692
+Drone longitude:  118.809471
+Drone altitude: 55
+Drone direction: 361
+Drone speed: 0
+Packet count: 369
+
+Time: 150113.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888905
+Operator longitude:  118.810159
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.889692
+Drone longitude:  118.809471
+Drone altitude: 55
+Drone direction: 361
+Drone speed: 0
+Packet count: 370
+
+Time: 150114.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888910
+Operator longitude:  118.810158
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.889692
+Drone longitude:  118.809471
+Drone altitude: 55
+Drone direction: 361
+Drone speed: 0
+Packet count: 371
+
+Time: 150115.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888922
+Operator longitude:  118.810167
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.889692
+Drone longitude:  118.809471
+Drone altitude: 51
+Drone direction: 59
+Drone speed: 1
+Packet count: 372
+
+Time: 150116.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888924
+Operator longitude:  118.810166
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.889706
+Drone longitude:  118.809502
+Drone altitude: 51
+Drone direction: 69
+Drone speed: 3
+Packet count: 373
+
+Time: 150117.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888925
+Operator longitude:  118.810166
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.889706
+Drone longitude:  118.809517
+Drone altitude: 51
+Drone direction: 104
+Drone speed: 2
+Packet count: 374
+
+Time: 150119.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888924
+Operator longitude:  118.810174
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.889645
+Drone longitude:  118.809585
+Drone altitude: 51
+Drone direction: 142
+Drone speed: 6
+Packet count: 375
+
+Time: 150120.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888924
+Operator longitude:  118.810174
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.889576
+Drone longitude:  118.809639
+Drone altitude: 51
+Drone direction: 146
+Drone speed: 8
+Packet count: 376
+
+Time: 150121.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888925
+Operator longitude:  118.810174
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.889536
+Drone longitude:  118.809662
+Drone altitude: 51
+Drone direction: 147
+Drone speed: 9
+Packet count: 377
+
+Time: 150123.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888924
+Operator longitude:  118.810174
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.889377
+Drone longitude:  118.809761
+Drone altitude: 51
+Drone direction: 155
+Drone speed: 10
+Packet count: 378
+
+Time: 150124.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888924
+Operator longitude:  118.810175
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.889292
+Drone longitude:  118.809814
+Drone altitude: 51
+Drone direction: 154
+Drone speed: 6
+Packet count: 379
+
+Time: 150125.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888924
+Operator longitude:  118.810174
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.889269
+Drone longitude:  118.809830
+Drone altitude: 49
+Drone direction: 153
+Drone speed: 3
+Packet count: 380
+
+Time: 150125.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888925
+Operator longitude:  118.810158
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.889259
+
+rone longitude:  118.809830
+Drone altitude: 47
+Drone direction: 361
+Drone speed: 0
+Packet count: 381
+
+Time: 150126.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888925
+Operator longitude:  118.810159
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.889259
+Drone longitude:  118.809830
+Drone altitude: 46
+Drone direction: 361
+Drone speed: 0
+Packet count: 382
+
+Time: 150127.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888927
+Operator longitude:  118.810160
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.889259
+Drone longitude:  118.809830
+Drone altitude: 44
+Drone direction: 361
+Drone speed: 0
+Packet count: 383
+
+Time: 150131.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888926
+Operator longitude:  118.810166
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.889261
+Drone longitude:  118.809830
+Drone altitude: 36
+Drone direction: 361
+Drone speed: 0
+Packet count: 384
+
+Time: 150133.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888929
+Operator longitude:  118.810167
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.889227
+Drone longitude:  118.809860
+Drone altitude: 35
+Drone direction: 142
+Drone speed: 4
+Packet count: 385
+
+Time: 150141.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888930
+Operator longitude:  118.810158
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.889214
+Drone longitude:  118.809868
+Drone altitude: 35
+Drone direction: 361
+Drone speed: 0
+Packet count: 386
+
+Time: 150142.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888930
+Operator longitude:  118.810150
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.889214
+Drone longitude:  118.809868
+Drone altitude: 35
+Drone direction: 361
+Drone speed: 0
+Packet count: 387
+
+Time: 150143.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888933
+Operator longitude:  118.810150
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.889214
+Drone longitude:  118.809883
+Drone altitude: 35
+Drone direction: 361
+Drone speed: 0
+Packet count: 388
+
+Time: 150144.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888933
+Operator longitude:  118.810151
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.889217
+Drone longitude:  118.809883
+Drone altitude: 33
+Drone direction: 361
+Drone speed: 0
+Packet count: 389
+
+Time: 150146.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888935
+Operator longitude:  118.810159
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.889214
+Drone longitude:  118.809868
+Drone altitude: 36
+Drone direction: 361
+Drone speed: 0
+Packet count: 390
+
+Time: 150148.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888937
+Operator longitude:  118.810152
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.889179
+Drone longitude:  118.809914
+Drone altitude: 34
+Drone direction: 143
+Drone speed: 5
+Packet count: 391
+
+Time: 150149.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888938
+Operator longitude:  118.810151
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.889153
+Drone longitude:  118.809937
+Drone altitude: 34
+Drone direction: 143
+Drone speed: 6
+Packet count: 392
+
+Time: 150151.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888951
+Operator longitude:  118.810158
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.889114
+Drone longitude:  118.809967
+Drone altitude: 34
+Drone direction: 361
+Drone speed: 0
+Packet count: 393
+
+Time: 150152.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888973
+Operator longitude:  118.810174
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.889112
+Drone longitude:  118.809967
+Drone altitude: 34
+Drone direction: 169
+Drone speed: 1
+Packet count: 394
+
+Time: 150154.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888977
+Operator longitude:  118.810183
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.889070
+Drone longitude:  118.809982
+Drone altitude: 34
+Drone direction: 161
+Drone speed: 1
+Packet count: 395
+
+Time: 150155.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.889000
+Operator longitude:  118.810188
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.889057
+Drone longitude:  118.809982
+Drone altitude: 34
+Drone direction: 165
+Drone speed: 1
+Packet count: 396
+
+Time: 150156.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.889004
+Operator longitude:  118.810182
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.889048
+Drone longitude:  118.809990
+Drone altitude: 34
+Drone direction: 169
+Drone speed: 1
+Packet count: 397
+
+Time: 150158.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888994
+Operator longitude:  118.810158
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.889002
+Drone longitude:  118.810005
+Drone altitude: 34
+Drone direction: 164
+Drone speed: 3
+Packet count: 398
+
+Time: 150159.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888991
+Operator longitude:  118.810151
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.888966
+Drone longitude:  118.810020
+Drone altitude: 34
+Drone direction: 168
+Drone speed: 1
+Packet count: 399
+
+Time: 150201.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888986
+Operator longitude:  118.810159
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.888958
+Drone longitude:  118.810020
+Drone altitude: 33
+Drone direction: 170
+Drone speed: 0
+Packet count: 400
+
+Time: 150203.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888983
+Operator longitude:  118.810158
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.888950
+Drone longitude:  118.810036
+Drone altitude: 33
+Drone direction: 90
+Drone speed: 1
+Packet count: 401
+
+Time: 150207.000
+Device latitude: 31.888899
+
+evice longitude: 118.810074
+Operator latitude:   31.888934
+Operator longitude:  118.810135
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.888950
+Drone longitude:  118.810036
+Drone altitude: 31
+Drone direction: 73
+Drone speed: 0
+Packet count: 402
+
+Time: 150211.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888976
+Operator longitude:  118.810167
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.888954
+Drone longitude:  118.810074
+Drone altitude: 27
+Drone direction: 361
+Drone speed: 0
+Packet count: 403
+
+Time: 150212.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888975
+Operator longitude:  118.810166
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.888954
+Drone longitude:  118.810074
+Drone altitude: 27
+Drone direction: 80
+Drone speed: 0
+Packet count: 404
+
+Time: 150215.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888975
+Operator longitude:  118.810150
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.888954
+Drone longitude:  118.810074
+Drone altitude: 22
+Drone direction: 361
+Drone speed: 0
+Packet count: 405
+
+Time: 150217.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888971
+Operator longitude:  118.810113
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.888954
+Drone longitude:  118.810074
+Drone altitude: 21
+Drone direction: 361
+Drone speed: 0
+Packet count: 406
+
+Time: 150218.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888969
+Operator longitude:  118.810105
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.888954
+Drone longitude:  118.810074
+Drone altitude: 21
+Drone direction: 361
+Drone speed: 0
+Packet count: 407
+
+Time: 150219.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888970
+Operator longitude:  118.810099
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.888954
+Drone longitude:  118.810074
+Drone altitude: 21
+Drone direction: 361
+Drone speed: 0
+Packet count: 408
+
+Time: 150220.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888972
+Operator longitude:  118.810091
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.888954
+Drone longitude:  118.810074
+Drone altitude: 21
+Drone direction: 361
+Drone speed: 0
+Packet count: 409
+
+Time: 150222.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888970
+Operator longitude:  118.810082
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.888954
+Drone longitude:  118.810074
+Drone altitude: 20
+Drone direction: 361
+Drone speed: 0
+Packet count: 410
+
+Time: 150223.000
+Device latitude: 31.888899
+Device longitude: 118.810074
+Operator latitude:   31.888970
+Operator longitude:  118.810082
+Drone SNnumber: 1581F6N8C241C00396AD
+Drone latitude:   31.888954
+Drone longitude:  118.810074
+Drone altitude: 20
+Drone direction: 361
+Drone speed: 0
+Packet count: 411

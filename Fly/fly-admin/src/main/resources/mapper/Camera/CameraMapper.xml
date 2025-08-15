@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zzk.system.mapper.CameraMapper">
+    
+    <resultMap type="com.zzk.system.domain.Camera" id="CameraResult">
+        <result property="id"    column="id"    />
+        <result property="name"    column="name"    />
+        <result property="longitude"    column="longitude"    />
+        <result property="latitude"    column="latitude"    />
+        <result property="streamUrl"    column="stream_url"    />
+        <result property="status"    column="status"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateTime"    column="update_time"    />
+    </resultMap>
+
+    <sql id="selectCameraVo">
+        select id, name, longitude, latitude, stream_url, status, create_time, update_time from camera
+    </sql>
+
+    <select id="selectCameraList" parameterType="com.zzk.system.domain.Camera" resultMap="CameraResult">
+        <include refid="selectCameraVo"/>
+        <where>  
+            <if test="name != null  and name != ''"> and name like concat('%', #{name}, '%')</if>
+            <if test="longitude != null "> and longitude = #{longitude}</if>
+            <if test="latitude != null "> and latitude = #{latitude}</if>
+            <if test="streamUrl != null  and streamUrl != ''"> and stream_url = #{streamUrl}</if>
+            <if test="status != null "> and status = #{status}</if>
+        </where>
+    </select>
+    
+    <select id="selectCameraById" parameterType="Long" resultMap="CameraResult">
+        <include refid="selectCameraVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertCamera" parameterType="com.zzk.system.domain.Camera" useGeneratedKeys="true" keyProperty="id">
+        insert into camera
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="name != null and name != ''">name,</if>
+            <if test="longitude != null">longitude,</if>
+            <if test="latitude != null">latitude,</if>
+            <if test="streamUrl != null and streamUrl != ''">stream_url,</if>
+            <if test="status != null">status,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateTime != null">update_time,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="name != null and name != ''">#{name},</if>
+            <if test="longitude != null">#{longitude},</if>
+            <if test="latitude != null">#{latitude},</if>
+            <if test="streamUrl != null and streamUrl != ''">#{streamUrl},</if>
+            <if test="status != null">#{status},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+         </trim>
+    </insert>
+
+    <update id="updateCamera" parameterType="com.zzk.system.domain.Camera">
+        update camera
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="name != null and name != ''">name = #{name},</if>
+            <if test="longitude != null">longitude = #{longitude},</if>
+            <if test="latitude != null">latitude = #{latitude},</if>
+            <if test="streamUrl != null and streamUrl != ''">stream_url = #{streamUrl},</if>
+            <if test="status != null">status = #{status},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteCameraById" parameterType="Long">
+        delete from camera where id = #{id}
+    </delete>
+
+    <delete id="deleteCameraByIds" parameterType="String">
+        delete from camera where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

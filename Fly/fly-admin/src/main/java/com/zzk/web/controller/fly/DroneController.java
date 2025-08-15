@@ -10,6 +10,10 @@ import com.zzk.system.service.fly.IDroneListService;
 import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+//实时追踪新增
+import com.zzk.web.service.DroneClientManager;
+import org.springframework.beans.factory.annotation.Autowired;
+//实时追踪结束
 
 /**
  * @description: 无人机列表接口
@@ -17,13 +21,20 @@ import org.springframework.web.bind.annotation.*;
  * @author: zzk
  * @created: 2023/03/09 15:03
  */
+
+   
+
 @RestController
 @RequestMapping("/fly/flylist")
 public class DroneController {
-
+   
 
     @Autowired
-    private IDroneListService droneListService;
+    private IDroneListService droneListService; 
+    //实时追踪新增
+    @Autowired
+    private DroneClientManager droneClientManager;
+    //实时追踪结束
 
     @PostMapping("/list")
     public Object queryDroneList(@RequestBody DroneQueryVo droneQueryVo){
@@ -54,4 +65,45 @@ public class DroneController {
         return droneListService.updateDrone (drone).getModifiedCount ()>0 ? AjaxResult.success (): AjaxResult.error ("无人机id或北斗卡号已经存在，请检查后再修改");
     }
 
+     //实时追踪新增
+
+    /**
+     * 启动无人机客户端模拟程序
+     */
+    @PostMapping("/startClient")
+    public AjaxResult startDroneClient() {
+        try {
+            if (droneClientManager.isRunning()) {
+                return AjaxResult.error("无人机客户端模拟程序已在运行中");
+            }
+            
+            boolean success = droneClientManager.startDroneClient();
+            if (success) {
+                return AjaxResult.success("无人机客户端模拟程序已启动");
+            } else {
+                return AjaxResult.error("启动失败");
+            }
+        } catch (Exception e) {
+            return AjaxResult.error("启动失败: " + e.getMessage());
+        }
+    }
+    
+    /**
+     * 停止无人机客户端模拟程序
+     */
+    @PostMapping("/stopClient")
+    public AjaxResult stopDroneClient() {
+        try {
+            boolean success = droneClientManager.stopDroneClient();
+            if (success) {
+                return AjaxResult.success("无人机客户端模拟程序已停止");
+            } else {
+                return AjaxResult.error("停止失败或程序未运行");
+            }
+        } catch (Exception e) {
+            return AjaxResult.error("停止失败: " + e.getMessage());
+        }
+    }
 }
+
+//实时追踪结束
