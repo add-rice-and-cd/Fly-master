@@ -1,3 +1,6 @@
+该项目搬运自https://github.com/zozikng/Fly
+上传GitHub仅为二次开发存档使用。
+
 # 无人机飞行管控平台
 
 ## 1.模块介绍
