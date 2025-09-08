@@ -1,5 +1,5 @@
-该项目搬运自https://github.com/zozikng/Fly
-上传GitHub仅为二次开发存档使用。
+该项目源自自https://github.com/zozikng/Fly
+已对其进行二次开发。
 
 # 无人机飞行管控平台
 
